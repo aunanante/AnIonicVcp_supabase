@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Confirm delete-commerce-modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-text-center">
+    <p>Are you sure you want to delete this Commerce?</p>
+    <p>{{ commerceData.name }}</p>
+    <ion-button (click)="closeModal()">Cancel</ion-button>
+    <ion-button (click)="confirm()">Confirm</ion-button>
+  </div>
+</ion-content>

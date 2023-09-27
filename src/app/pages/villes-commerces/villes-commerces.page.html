@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Villes Commerces
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToLoginPage()">
+        Login
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Row 1 -->
+    <ion-row>
+      <!-- Column 1 -->
+      <ion-col size="6">
+        <!-- Ion Search Input for Ville Search -->
+        <ion-searchbar placeholder="Search Ville" (ionInput)="onSearchQueryChange($event)"></ion-searchbar>
+      </ion-col>
+      <!-- Column 2 -->
+      <ion-col size="6">
+        <!-- Add a button to toggle alternate color -->
+        <ion-button (click)="toggleAlternateColor()">Toggle Alternate Color</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <!-- Row 2 -->
+    <ion-row>
+      <!-- Column 1 -->
+      <ion-col size="6">
+        <!-- Use ion-content for scrolling -->
+        <ion-content scrollY="true" style="height: 300px;">
+          <ion-list lines="none">
+            <ion-item *ngFor="let ville of filteredVilles; let i = index" (click)="selectVille(ville)"
+                      [ngClass]="i % 2 === 0 ? 'even-item' : 'odd-item'">
+              {{ ville.villename }}
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-col>
+      <!-- Column 2 -->
+      <ion-col size="6">Column 4</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

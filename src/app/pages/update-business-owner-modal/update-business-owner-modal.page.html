@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirm Business Owner Update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-text>{{ businessOwnerData.email }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-text>{{ businessOwnerData.name }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Address</ion-label>
+      <ion-text>{{ businessOwnerData.adresse }}</ion-text>
+    </ion-item>
+    <!-- Include other fields here -->
+    <ion-item>
+      <ion-label>Address</ion-label>
+      <ion-text>{{ businessOwnerData.telephone1 }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Address</ion-label>
+      <ion-text>{{ businessOwnerData.telephone2 }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Address</ion-label>
+      <ion-text>{{ businessOwnerData.monthly_fee_paid }}</ion-text>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-text-center">
+    <ion-button (click)="closeModal()">Cancel</ion-button>
+    <ion-button (click)="confirm()">Confirm</ion-button>
+  </div>
+</ion-content>

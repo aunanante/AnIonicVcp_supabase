@@ -1,0 +1,18 @@
+.even-item {
+  --ion-item-background: rgb(156, 218, 243);
+}
+
+.odd-item {
+  --ion-item-background: lightpink;
+}
+
+/* Add a border to list items */
+ion-item {
+  --ion-item-border-color: #ccc; /* Change to your desired border color */
+}
+
+/* Style the scrollbar */
+ion-content {
+  --ion-scrollbar-background: #f0f0f0; /* Change to your desired scrollbar background color */
+  --ion-scrollbar-thumb-background: #999; /* Change to your desired scrollbar thumb color */
+}

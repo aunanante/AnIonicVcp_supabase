@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Category Name</ion-label>
+    <ion-input [(ngModel)]="categoryData.categoryname" type="text"></ion-input>
+  </ion-item>
+
+  <!-- Disable other fields for visibility -->
+  <ion-item>
+    <ion-label position="stacked">Ville ID</ion-label>
+    <ion-input [(ngModel)]="categoryData.ville_id" type="text" disabled></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Business Owner ID</ion-label>
+    <ion-input [(ngModel)]="categoryData.business_owner_id" type="text" disabled></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Commerce ID</ion-label>
+    <ion-input [(ngModel)]="categoryData.commerce_id" type="text" disabled></ion-input>
+  </ion-item>
+
+  <ion-footer>
+    <ion-button expand="full" (click)="updateCategory()">Confirm</ion-button>
+    <ion-button expand="full" (click)="closeModal()">Cancel</ion-button>
+  </ion-footer>
+</ion-content>
